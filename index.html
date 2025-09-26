@@ -1,17 +1,120 @@
-<section id="proyectos">
-  <h2>Proyectos</h2>
-  <div class="projects-container">
-    <article class="project-card">
-      <img src="assets/img/proyecto1.png" alt="Captura Proyecto 1">
-      <h3>Proyecto 1</h3>
-      <p>Descripción breve del proyecto, tecnologías usadas: HTML, CSS, JS.</p>
-      <a href="https://github.com/cristiancunha-ad/proyecto1" target="_blank">Ver en GitHub</a>
-    </article>
-    <article class="project-card">
-      <img src="assets/img/proyecto2.png" alt="Captura Proyecto 2">
-      <h3>Proyecto 2</h3>
-      <p>Descripción breve del proyecto, tecnologías usadas: Python, Flask.</p>
-      <a href="https://github.com/cristiancunha-ad/proyecto2" target="_blank">Ver en GitHub</a>
-    </article>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristian García — CV Profesional</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <h1>Cristian García</h1>
+      <p>Desarrollador Web & Automatización</p>
+      <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#skills">Skills</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sobre mí -->
+  <section id="sobre-mi" class="section">
+    <div class="sobre-container">
+      <img src="assets/img/foto-perfil.jpg" alt="Foto de Cristian" class="foto-perfil">
+      <div class="texto">
+        <h2>Sobre mí</h2>
+        <p>Soy un apasionado del desarrollo web y la automatización de procesos. Mi objetivo es crear soluciones inteligentes que ahorren tiempo y optimicen el trabajo de empresas y personas.</p>
+        <p>Manejo tecnologías como <strong>JavaScript</strong>, <strong>Python</strong>, <strong>PHP</strong>, y frameworks modernos. Mi motivación principal es el aprendizaje constante y la innovación.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">HTML5 / CSS3</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">PHP</div>
+      <div class="skill-card">Git & GitHub</div>
+      <div class="skill-card">Automatización (Make, Zapier, n8n)</div>
+    </div>
+  </section>
+
+  <!-- Proyectos -->
+  <section id="proyectos" class="section">
+    <h2>Proyectos & Emprendimientos</h2>
+    <div class="proyectos-grid">
+      <div class="proyecto-card">
+        <h3>Portfolio Web</h3>
+        <p>Un sitio moderno para mostrar mi experiencia y proyectos.</p>
+        <a href="#" target="_blank">Ver Demo</a>
+        <a href="#" target="_blank">Código</a>
+      </div>
+      <div class="proyecto-card">
+        <h3>Automatización de reservas</h3>
+        <p>Flujo automatizado de WhatsApp + Calendly para restaurantes.</p>
+        <a href="#" target="_blank">Ver Demo</a>
+        <a href="#" target="_blank">Código</a>
+      </div>
+      <div class="proyecto-card">
+        <h3>E-commerce propio</h3>
+        <p>He creado y gestionado una tienda online desde cero, incluyendo diseño, desarrollo y campañas publicitarias en <strong>Facebook Ads</strong> y <strong>TikTok Ads</strong>.</p>
+      </div>
+      <div class="proyecto-card">
+        <h3>Agencia de automatización</h3>
+        <p>He fundado una agencia donde diseño y despliego automatizaciones con <strong>n8n</strong> y otras herramientas para negocios, optimizando procesos y ahorrando tiempo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia -->
+  <section id="experiencia" class="section">
+    <h2>Experiencia</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span>2023 - Actualidad</span>
+        <h3>Help Desk — Andorra Telecom</h3>
+        <p>Gestión integral de soporte técnico y administración de sistemas. Mis principales responsabilidades incluyen:</p>
+        <ul>
+          <li>Administración de Active Directory (DA) y gestión de usuarios y permisos.</li>
+          <li>Soporte de hardware y resolución de incidencias de equipos corporativos.</li>
+          <li>Gestión de despliegue de aplicaciones mediante <strong>SCCM</strong>, configurando paquetes para el Software Center de los usuarios.</li>
+          <li>Optimización de procesos internos y asistencia en incidencias críticas de software y redes.</li>
+        </ul>
+        <p>Contribuyendo a mantener la infraestructura interna estable y eficiente para todos los empleados.</p>
+      </div>
+      <div class="timeline-item">
+        <span>2022</span>
+        <h3>R&C Associats</h3>
+        <p>Desarrollo de automatizaciones en <strong>Visual Basic para Excel</strong> con macros para <strong>MoraBanc</strong>. Proyecto de optimización de procesos internos, logrando un <strong>ahorro significativo de horas diarias y mensuales</strong> para los empleados del banco que gestionaban grandes volúmenes de datos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>¿Quieres trabajar conmigo? Escríbeme:</p>
+    <div class="contact-links">
+      <a href="mailto:tuemail@gmail.com">📧 Email</a>
+      <a href="https://github.com/cristiancunha-ad" target="_blank">💻 GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank">🔗 LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Cristian García — CV Profesional</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
