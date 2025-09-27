@@ -137,6 +137,14 @@ header nav a:hover {
   color: #fff;
 }
 
+/* NUEVO - mejor legibilidad en los párrafos de proyectos */
+.proyecto-card p {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
 /* Timeline */
 .timeline {
   border-left: 3px solid #00f5d4;
@@ -164,6 +172,18 @@ header nav a:hover {
   background: #2563eb;
   border-radius: 50%;
   box-shadow: 0 0 10px #2563eb;
+}
+
+/* NUEVO - listas dentro de experiencia */
+.timeline-item ul {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  list-style: disc;
+  color: #ccc;
+}
+
+.timeline-item li {
+  margin-bottom: 0.4rem;
 }
 
 /* Contacto */
@@ -199,4 +219,48 @@ footer {
     flex-direction: column;
     text-align: center;
   }
+}
+
+
+/* Modal de imagen */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(15, 15, 26, 0.95); /* Fondo semi-transparente */
+}
+
+.modal-content {
+  margin: 5% auto;
+  display: block;
+  max-width: 90%;
+  border-radius: 1rem;
+  border: 3px solid #00f5d4;
+  box-shadow: 0 0 20px #00f5d4;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #00f5d4;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #2563eb;
 }
