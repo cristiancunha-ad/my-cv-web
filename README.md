@@ -1,20 +1,21 @@
-3️⃣ Continuar trabajando en tu CV
+💼 My CV Web
 
-Cada vez que hagas cambios:
+Este repositorio contiene mi Currículum Vitae en formato web, desarrollado con HTML, CSS y JavaScript. La idea de este proyecto es presentar mi perfil profesional de una manera diferente, interactiva y creativa, saliendo del formato tradicional en PDF.
 
-Guarda tus archivos en VS Code.
+🎯 Objetivo
 
-En Git Bash, dentro de tu repo:
+Mostrar mis habilidades técnicas y mi capacidad de diseño/desarrollo web, al mismo tiempo que comparto mi trayectoria profesional de forma accesible y moderna.
 
-git add .
-git commit -m "feat: mensaje describiendo el cambio"
-git push
+🚀 Características
 
+Diseño limpio y responsive (adaptado a móviles, tablets y escritorio).
 
-Ejemplo de commits:
+Implementado con código propio en HTML, CSS y JS.
 
-feat: agregar sección proyectos
+Disponible en línea gracias a GitHub Pages.
 
-fix: corregir colores del header
+🌍 Ver online
 
-style: mejorar tipografía y padding
+👉 Mi CV en versión web https://cristiancunha-ad.github.io/
+
+Porque un CV no solo debe contar lo que sabes hacer, sino también demostrarlo

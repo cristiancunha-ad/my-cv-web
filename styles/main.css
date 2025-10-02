@@ -273,11 +273,28 @@ footer {
   padding: 0.3rem 0.6rem;
   font-weight: bold;
   cursor: pointer;
+  appearance: none; /* Quita el estilo por defecto del sistema */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
 }
 
 #lang-switcher:hover {
   background: #2563eb;
   color: white;
   border-color: #2563eb;
+}
+
+/* Opciones dentro del select */
+#lang-switcher option {
+  background: #1a1a2e; /* Fondo de cada opción */
+  color: #00f5d4;       /* Texto de cada opción */
+  padding: 0.3rem;
+  border-bottom: 1px solid #00f5d4; /* Línea separadora */
+}
+
+/* Última opción sin borde inferior */
+#lang-switcher option:last-child {
+  border-bottom: none;
 }
 
