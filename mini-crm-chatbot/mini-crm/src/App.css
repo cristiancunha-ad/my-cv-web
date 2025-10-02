@@ -1,0 +1,167 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: #f4f6f8; /* Fondo claro */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Contenedor principal de 3 columnas */
+.app-container {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  height: 100vh;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.sidebar h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #3498db;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #2980b9;
+}
+
+/* CRM central */
+.crm-data {
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.crm-data h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.crm-data ul {
+  list-style: none;
+}
+
+.crm-data li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.crm-data li button {
+  padding: 0.3rem 0.6rem;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.crm-data li button:hover {
+  background-color: #c0392b;
+}
+
+.crm-data input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+/* Chatbot */
+.chatbot {
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chatbot h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.chatbot-input {
+  display: flex;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+
+.chatbot-input button {
+  padding: 0.5rem 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chatbot-input button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .app-container {
+    grid-template-columns: 25% 50% 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .sidebar, .crm-data, .chatbot {
+    margin-bottom: 1rem;
+  }
+}

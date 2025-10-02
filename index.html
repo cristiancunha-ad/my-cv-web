@@ -12,14 +12,20 @@
   <header>
     <div class="header-container">
       <h1>Cristian García</h1>
-      <p>Desarrollador Web & Automatización</p>
+      <p data-key="subtitulo">Desarrollador Web & Automatización</p>
       <nav>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#skills">Skills</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#sobre-mi" data-key="nav-sobre">Sobre mí</a>
+        <a href="#skills" data-key="nav-skills">Skills</a>
+        <a href="#proyectos" data-key="nav-proyectos">Proyectos</a>
+        <a href="#experiencia" data-key="nav-experiencia">Experiencia</a>
+        <a href="#contacto" data-key="nav-contacto">Contacto</a>
       </nav>
+      <!-- Botón de idiomas -->
+      <select id="lang-switcher">
+        <option value="es">🇪🇸 Español</option>
+        <option value="ca">🇦🇩 Català</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
     </div>
   </header>
 
@@ -28,93 +34,93 @@
     <div class="sobre-container">
       <img src="assets/img/foto-perfil.jpg" alt="Foto de Cristian" class="foto-perfil">
       <div class="texto">
-        <h2>Sobre mí</h2>
-        <p>Soy un desarrollador web y especialista en automatización de procesos, con pasión por crear soluciones que ahorran tiempo y optimizan tareas. Busco oportunidades de trabajo remoto para aplicar mis conocimientos en proyectos reales y mejorar la eficiencia de equipos y empresas.</p>
-        <p>He trabajado con tecnologías como <strong>JavaScript</strong>, <strong>Python</strong>, <strong>PHP</strong>, <strong>Powershell</strong> y herramientas de automatización (<strong>Make, Zapier, n8n</strong>). Me motiva aprender constantemente y enfrentar desafíos de desarrollo y automatización.</p>
+        <h2 data-key="sobre-titulo">Sobre mí</h2>
+        <p data-key="sobre-texto1">Soy un desarrollador web y especialista en automatización de procesos, con pasión por crear soluciones que ahorran tiempo y optimizan tareas. Busco oportunidades de trabajo remoto para aplicar mis conocimientos en proyectos reales y mejorar la eficiencia de equipos y empresas.</p>
+        <p data-key="sobre-texto2">He trabajado con tecnologías como <strong>JavaScript</strong>, <strong>Python</strong>, <strong>PHP</strong>, <strong>Powershell</strong> y herramientas de automatización (<strong>Make, Zapier, n8n</strong>). Me motiva aprender constantemente y enfrentar desafíos de desarrollo y automatización.</p>
       </div>
     </div>
   </section>
 
   <!-- Skills -->
   <section id="skills" class="section">
-    <h2>Skills</h2>
+    <h2 data-key="skills-titulo">Skills</h2>
     <div class="skills-grid">
-      <div class="skill-card"><strong>HTML5 / CSS3</strong></div>
-      <div class="skill-card"><strong>JavaScript</strong></div>
-      <div class="skill-card"><strong>Python</strong></div>
-      <div class="skill-card"><strong>PHP</strong></div>
-      <div class="skill-card"><strong>Powershell</strong></div>
-      <div class="skill-card"><strong>Git & GitHub</strong></div>
-      <div class="skill-card"><strong>SCCM</strong></div>
-      <div class="skill-card"><strong>Automatización (Make, Zapier, n8n)</strong></div>
+      <div class="skill-card" data-key="skill-html">HTML5 / CSS3</div>
+      <div class="skill-card" data-key="skill-js">JavaScript</div>
+      <div class="skill-card" data-key="skill-python">Python</div>
+      <div class="skill-card" data-key="skill-php">PHP</div>
+      <div class="skill-card" data-key="skill-powershell">Powershell</div>
+      <div class="skill-card" data-key="skill-git">Git & GitHub</div>
+      <div class="skill-card" data-key="skill-sccm">SCCM</div>
+      <div class="skill-card" data-key="skill-automatizacion">Automatización (Make, Zapier, n8n)</div>
     </div>
   </section>
 
   <!-- Proyectos -->
   <section id="proyectos" class="section">
-    <h2>Proyectos & Emprendimientos</h2>
+    <h2 data-key="proyectos-titulo">Proyectos & Emprendimientos</h2>
     <div class="proyectos-grid">
       <div class="proyecto-card">
-        <h3>Portfolio Web</h3>
-        <p>Este mismo sitio que estás viendo. Muestra mi experiencia, habilidades y proyectos de forma profesional y moderna.</p>
-        <a href="#" target="_blank">Ver</a>
+        <h3 data-key="proyecto1-titulo">Portfolio Web</h3>
+        <p data-key="proyecto1-texto">Este mismo sitio que estás viendo. Muestra mi experiencia, habilidades y proyectos de forma profesional y moderna.</p>
+        <a href="#" target="_blank" data-key="ver">Ver</a>
       </div>
       <div class="proyecto-card">
-        <h3>Automatización de reservas</h3>
-        <p>Flujo automatizado de WhatsApp + Calendly para restaurantes, reduciendo errores y optimizando la gestión de citas.</p>
-        <a class="open-modal" data-img="assets/img/wa-flujo.png">Ver flujo</a>
+        <h3 data-key="proyecto2-titulo">Automatización de reservas</h3>
+        <p data-key="proyecto2-texto">Flujo automatizado de WhatsApp + Calendly para restaurantes, reduciendo errores y optimizando la gestión de citas.</p>
+        <a class="open-modal" data-img="assets/img/wa-flujo.png" data-key="ver-flujo">Ver flujo</a>
       </div>
       <div class="proyecto-card">
-        <h3>Bot de chat básico</h3>
-        <p>Desarrollé un chatbot que interactúa conmigo para automatizar tareas y consultas simples, demostrando conocimientos en Python y lógica de programación.</p>
-        <a class="open-modal" data-img="assets/img/flujo-chatbot.webp">Ver flujo</a>
+        <h3 data-key="proyecto3-titulo">Chatbot básico</h3>
+        <p data-key="proyecto3-texto">Desarrollé un chatbot que interactúa conmigo para automatizar tareas y consultas simples, demostrando conocimientos en Python y lógica de programación.</p>
+        <a class="open-modal" data-img="assets/img/flujo-chatbot.webp" data-key="ver-flujo">Ver flujo</a>
       </div>
       <div class="proyecto-card">
-        <h3>E-commerce 3D y Dropshipping</h3>
-        <p>Creé dos tiendas online: una de dropshipping y otra de productos impresos en 3D con mi Bambulab A1, incluyendo diseño, desarrollo y marketing digital.</p>
-        <a href="#" target="_blank">Ver Tienda</a>
+        <h3 data-key="proyecto4-titulo">E-commerce 3D y Dropshipping</h3>
+        <p data-key="proyecto4-texto">Creé dos tiendas online: una de dropshipping y otra de productos impresos en 3D con mi Bambulab A1, incluyendo diseño, desarrollo y marketing digital.</p>
+        <a href="https://aubity.es/" target="_blank" data-key="ver-tienda">Ver Tienda</a>
       </div>
       <div class="proyecto-card">
-        <h3>Herramienta interna Python</h3>
-        <p>Programa propio para optimizar la gestión de usuarios en Active Directory, ahorrando tiempo al consultar datos y realizar tareas administrativas desde mi escritorio.</p>
-        <a href="#" target="_blank">Código</a>
+        <h3 data-key="proyecto5-titulo">Herramienta interna Python</h3>
+        <p data-key="proyecto5-texto">Programa propio para optimizar la gestión de usuarios en Active Directory, ahorrando tiempo al consultar datos y realizar tareas administrativas desde mi escritorio.</p>
+        <a href="#" target="_blank" data-key="codigo">Código</a>
       </div>
       <div class="proyecto-card">
-        <h3>Mini proyectos rápidos</h3>
-        <p>Pequeños proyectos para portfolio rápido, como calculadoras interactivas en JavaScript, dashboards con APIs públicas y scripts de automatización de tareas.</p>
-        <a href="#" target="_blank">Ver Ejemplos</a>
-        <a href="#" target="_blank">Código</a>
+        <h3 data-key="proyecto6-titulo">Mini proyectos rápidos</h3>
+        <p data-key="proyecto6-texto">Pequeños proyectos para portfolio rápido, como calculadoras interactivas en JavaScript, dashboards con APIs públicas y scripts de automatización de tareas.</p>
+        <a href="mini-crm-chatbot/mini-crm/public/index.html" target="_blank" data-key="ver-ejemplos">Ver Ejemplos</a>
+        <a href="#" target="_blank" data-key="codigo">Código</a>
       </div>
     </div>
   </section>
 
   <!-- Experiencia -->
   <section id="experiencia" class="section">
-    <h2>Experiencia</h2>
+    <h2 data-key="experiencia-titulo">Experiencia</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <span>2024 - 2025  Año completo</span>
-        <h3>Help Desk — Andorra Telecom</h3>
-        <p>Gestioné soporte técnico y administración de sistemas durante un año completo, configurando más de 50 portátiles y atendiendo más de 600 tickets de usuarios.</p>
+        <span data-key="exp1-fecha">2024 - 2025  Año completo</span>
+        <h3 data-key="exp1-titulo">Help Desk — Andorra Telecom</h3>
+        <p data-key="exp1-texto1">Gestioné soporte técnico y administración de sistemas durante un año completo, configurando más de 50 portátiles y atendiendo más de 600 tickets de usuarios.</p>
         <ul>
-          <li>Administración de Active Directory y gestión de usuarios y permisos.</li>
-          <li>Despliegue de aplicaciones con <strong>SCCM</strong> y soporte de hardware.</li>
-          <li>Optimización de procesos internos mediante scripts y herramientas propias.</li>
+          <li data-key="exp1-li1">Administración de Active Directory y gestión de usuarios y permisos.</li>
+          <li data-key="exp1-li2">Despliegue de aplicaciones con <strong>SCCM</strong> y soporte de hardware.</li>
+          <li data-key="exp1-li3">Optimización de procesos internos mediante scripts y herramientas propias.</li>
         </ul>
-        <p>Todo esto contribuyó a mantener la infraestructura estable y eficiente para todos los empleados.</p>
+        <p data-key="exp1-texto2">Todo esto contribuyó a mantener la infraestructura estable y eficiente para todos los empleados.</p>
       </div>
       <div class="timeline-item">
-        <span>2024</span>
-        <h3>R&C Associats</h3>
-        <p>Desarrollo de automatizaciones en <strong>Visual Basic para Excel</strong> con macros para <strong>MoraBanc</strong>, logrando un ahorro significativo de horas diarias para empleados que gestionaban grandes volúmenes de datos.</p>
+        <span data-key="exp2-fecha">2024</span>
+        <h3 data-key="exp2-titulo">R&C Associats</h3>
+        <p data-key="exp2-texto">Desarrollo de automatizaciones en <strong>Visual Basic para Excel</strong> con macros para <strong>MoraBanc</strong>, logrando un ahorro significativo de horas diarias para empleados que gestionaban grandes volúmenes de datos.</p>
       </div>
     </div>
   </section>
 
   <!-- Contacto -->
   <section id="contacto" class="section">
-    <h2>Contacto</h2>
-    <p>¿Quieres trabajar conmigo? Escríbeme:</p>
+    <h2 data-key="contacto-titulo">Contacto</h2>
+    <p data-key="contacto-texto">¿Quieres trabajar conmigo? Escríbeme:</p>
     <div class="contact-links">
       <a href="mailto:cristiancunha.ad@gmail.com">📧 Email</a>
       <a href="https://github.com/cristiancunha-ad" target="_blank">💻 GitHub</a>
@@ -122,21 +128,18 @@
     </div>
   </section>
 
-
   <!-- Footer -->
   <footer>
-    <p>© 2025 Cristian García — CV Profesional</p>
+    <p data-key="footer">© 2025 Cristian García — CV Profesional</p>
   </footer>
 
-    <!-- Modal de imagen -->
+  <!-- Modal de imagen -->
   <div id="modal" class="modal">
     <span class="close-modal">&times;</span>
     <div class="modal-content">
       <img id="modal-img" src="" alt="Flujo">
     </div>
   </div>
-
-
 
   <script src="js/main.js"></script>
 </body>

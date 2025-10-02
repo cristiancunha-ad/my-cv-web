@@ -264,3 +264,20 @@ footer {
 .close-modal:hover {
   color: #2563eb;
 }
+
+#lang-switcher {
+  background: #1a1a2e;
+  color: #00f5d4;
+  border: 1px solid #00f5d4;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#lang-switcher:hover {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
