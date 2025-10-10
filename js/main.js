@@ -1,26 +1,31 @@
+// =====================
 // Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', function(e){
+// =====================
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
     const target = document.querySelector(this.getAttribute('href'));
-    if(target){
+    if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
 
+// =====================
 // Reveal animation using IntersectionObserver
+// =====================
 const sections = document.querySelectorAll('.section, .proyecto-card, .timeline-item');
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if(entry.isIntersecting) entry.target.classList.add('in-view');
+    if (entry.isIntersecting) entry.target.classList.add('in-view');
   });
 }, { threshold: 0.12 });
 
 sections.forEach(s => io.observe(s));
 
-
+// =====================
 // Modal
+// =====================
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
 const closeModal = document.querySelector(".close-modal");
@@ -40,15 +45,14 @@ closeModal.addEventListener("click", () => {
 
 // Cerrar modal al hacer clic fuera de la imagen
 modal.addEventListener("click", e => {
-  if(e.target === modal) {
+  if (e.target === modal) {
     modal.style.display = "none";
   }
 });
 
-
-
+// =====================
 // Diccionario de traducciones
-// Diccionario de traducciones optimizado
+// =====================
 const translations = {
   es: {
     "subtitulo": "Desarrollador Web & Automatización",
@@ -181,11 +185,56 @@ const translations = {
     "contacto-titulo": "Contact",
     "contacto-texto": "Want to work with me? Get in touch:",
     "footer": "© 2025 Cristian García — Professional CV"
+  },
+  fr: {
+    "subtitulo": "Développeur Web & Spécialiste en Automatisation",
+    "nav-sobre": "À propos de moi",
+    "nav-skills": "Compétences",
+    "nav-proyectos": "Projets",
+    "nav-experiencia": "Expérience",
+    "nav-contacto": "Contact",
+    "sobre-titulo": "À propos de moi",
+    "sobre-texto1": "Je suis un développeur web et un spécialiste de l'automatisation des processus, passionné par la création de solutions qui font gagner du temps et optimisent les tâches. Je cherche des opportunités de travail à distance pour appliquer mes connaissances à des projets réels et améliorer l'efficacité des équipes et des entreprises.",
+    "sobre-texto2": "J'ai travaillé avec des technologies et des outils d'automatisation. J'aime apprendre continuellement et relever les défis du développement et de l'automatisation.",
+    "skills-titulo": "Compétences",
+    "proyectos-titulo": "Projets & Entreprises",
+    "proyecto1-titulo": "Portfolio Web",
+    "proyecto1-texto": "Ce même site que vous consultez. Il présente mon expérience, mes compétences et mes projets de manière professionnelle et moderne.",
+    "proyecto2-titulo": "Automatisation des réservations",
+    "proyecto2-texto": "Flux automatisé WhatsApp + Calendly pour les restaurants, réduisant les erreurs et optimisant la gestion des rendez-vous.",
+    "proyecto3-titulo": "Chatbot basique",
+    "proyecto3-texto": "J'ai développé un chatbot qui interagit avec moi pour automatiser des tâches et des requêtes simples.",
+    "proyecto4-titulo": "E-commerce 3D & Dropshipping",
+    "proyecto4-texto": "J'ai créé deux boutiques en ligne : une de dropshipping et une autre pour des produits imprimés en 3D, incluant le design, le développement et le marketing digital.",
+    "proyecto5-titulo": "Outil interne Python",
+    "proyecto5-texto": "Programme interne pour optimiser la gestion des utilisateurs dans Active Directory, réduisant le temps nécessaire pour consulter les données et effectuer des tâches administratives.",
+    "proyecto6-titulo": "Mini projets rapides",
+    "proyecto6-texto": "Petits projets rapides pour portfolio, tels que des calculatrices interactives, des tableaux de bord et des scripts d’automatisation.",
+    "ver": "Voir",
+    "ver-flujo": "Voir le flux",
+    "ver-tienda": "Voir la boutique",
+    "ver-ejemplos": "Voir des exemples",
+    "codigo": "Code",
+    "experiencia-titulo": "Expérience",
+    "exp1-fecha": "2024 - 2025  Année complète",
+    "exp1-titulo": "Help Desk — Andorra Telecom",
+    "exp1-texto1": "J'ai géré le support technique et l'administration des systèmes pendant une année complète, en configurant des ordinateurs portables et en traitant les tickets utilisateurs.",
+    "exp1-li1": "Administration d'Active Directory et gestion des utilisateurs et des permissions.",
+    "exp1-li2": "Déploiement d'applications avec SCCM et support matériel.",
+    "exp1-li3": "Optimisation des processus internes via des scripts et outils personnalisés.",
+    "exp1-texto2": "Tout cela a contribué à maintenir une infrastructure stable et efficace.",
+    "exp2-fecha": "2024",
+    "exp2-titulo": "R&C Associats",
+    "exp2-texto": "Développement d'automatisations en Visual Basic pour Excel avec macros, permettant un gain de temps significatif au quotidien pour les employés.",
+    "contacto-titulo": "Contact",
+    "contacto-texto": "Envie de collaborer avec moi ? Écris-moi :",
+    "footer": "© 2025 Cristian García — CV Professionnel"
   }
 };
 
-
-// Función para cambiar idioma
+// =====================
+// Función para cambiar idioma y guardarlo
+// =====================
 function setLanguage(lang) {
   const elements = document.querySelectorAll("[data-key]");
   elements.forEach(el => {
@@ -194,12 +243,20 @@ function setLanguage(lang) {
       el.textContent = translations[lang][key];
     }
   });
+  localStorage.setItem("preferredLang", lang);
 }
 
+// =====================
 // Evento del selector
-document.getElementById("lang-switcher").addEventListener("change", (e) => {
+// =====================
+const langSwitcher = document.getElementById("lang-switcher");
+langSwitcher.addEventListener("change", (e) => {
   setLanguage(e.target.value);
 });
 
-// Idioma inicial (Español)
-setLanguage("es");
+// =====================
+// Idioma inicial (detecta o guarda preferencia)
+// =====================
+const savedLang = localStorage.getItem("preferredLang") || "es";
+setLanguage(savedLang);
+langSwitcher.value = savedLang;
