@@ -187,22 +187,61 @@ header nav a:hover {
 }
 
 /* Contacto */
-.contact-links a {
-  display: inline-block;
-  margin: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 0.5rem;
-  background: #1a1a2e;
-  color: #00f5d4;
-  border: 1px solid #00f5d4;
-  text-decoration: none;
-  transition: all 0.3s;
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.contact-links a:hover {
-  background: #2563eb;
-  color: #fff;
-  border-color: #2563eb;
+.contact-card {
+  background: #1a1a2e;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #222;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00f5d4;
+  border-color: #00f5d4;
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #00f5d4;
+}
+
+.contact-link {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.contact-link:hover {
+  color: #00f5d4;
+}
+
+.flag-emoji {
+  font-size: 1.2rem;
+  display: inline-block;
 }
 
 /* Footer */
@@ -218,6 +257,15 @@ footer {
   .sobre-container {
     flex-direction: column;
     text-align: center;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
   }
 }
 

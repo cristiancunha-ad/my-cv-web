@@ -18,6 +18,7 @@
         <a href="#skills" data-key="nav-skills">Skills</a>
         <a href="#proyectos" data-key="nav-proyectos">Proyectos</a>
         <a href="#experiencia" data-key="nav-experiencia">Experiencia</a>
+        <a href="#estudios" data-key="nav-estudios">Estudios</a>
         <a href="#contacto" data-key="nav-contacto">Contacto</a>
       </nav>
       <!-- Botón de idiomas -->
@@ -48,6 +49,7 @@
     <div class="skills-grid">
       <div class="skill-card" data-key="skill-html">HTML5 / CSS3</div>
       <div class="skill-card" data-key="skill-js">JavaScript</div>
+      <div class="skill-card" data-key="skill-js">Java</div>
       <div class="skill-card" data-key="skill-python">Python</div>
       <div class="skill-card" data-key="skill-php">PHP</div>
       <div class="skill-card" data-key="skill-powershell">Powershell</div>
@@ -118,14 +120,55 @@
     </div>
   </section>
 
+  <!-- Estudios -->
+  <section id="estudios" class="section">
+    <h2 data-key="estudios-titulo">Estudios</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span data-key="est1-fecha">En curso</span>
+        <h3 data-key="est1-titulo">Ingeniería Informática</h3>
+        <p data-key="est1-texto">Universitat d'Andorra (UdA)<em data-key="est1-estado">1 año y medio completado, actualmente en pausa</em></p>
+      </div>
+      <div class="timeline-item">
+        <span data-key="est2-fecha">Anterior</span>
+        <h3 data-key="est2-titulo">BP — Batxillerat Professional en Sistemes i Xarxes Informàtiques</h3>
+        <p data-key="est2-texto">Centre de Formació Professional d'Aixovall</p>
+      </div>
+      <div class="timeline-item">
+        <span data-key="est3-fecha">Anterior</span>
+        <h3 data-key="est3-titulo">DEP — Diploma d'Ensenyament Professional en Microinformàtica i Xarxes</h3>
+        <p data-key="est3-texto">Centre de Formació Professional d'Aixovall</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Contacto -->
   <section id="contacto" class="section">
     <h2 data-key="contacto-titulo">Contacto</h2>
     <p data-key="contacto-texto">¿Quieres trabajar conmigo? Escríbeme:</p>
-    <div class="contact-links">
-      <a href="mailto:cristiancunha.ad@gmail.com">📧 Email</a>
-      <a href="https://github.com/cristiancunha-ad" target="_blank">💻 GitHub</a>
-      <a href="https://www.linkedin.com/in/cristian-garcia-bb0791329/" target="_blank">🔗 LinkedIn</a>
+    <div class="contact-container">
+      <div class="contact-card">
+        <div class="contact-icon">📧</div>
+        <h3 data-key="contacto-email-titulo">Email</h3>
+        <a href="mailto:cristiancunha.ad@gmail.com" class="contact-link">cristiancunha.ad@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📱</div>
+        <h3 data-key="contacto-telefono-titulo">Teléfono</h3>
+        <a href="tel:+376395902" class="contact-link">
+          <span class="flag-emoji">🇦🇩</span> +376 39 59 02
+        </a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">💻</div>
+        <h3 data-key="contacto-github-titulo">GitHub</h3>
+        <a href="https://github.com/cristiancunha-ad" target="_blank" class="contact-link">cristiancunha-ad</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🔗</div>
+        <h3 data-key="contacto-linkedin-titulo">LinkedIn</h3>
+        <a href="https://www.linkedin.com/in/cristian-garcia-bb0791329/" target="_blank" class="contact-link">Cristian García</a>
+      </div>
     </div>
   </section>
 
