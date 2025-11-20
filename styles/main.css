@@ -186,6 +186,14 @@ header nav a:hover {
   margin-bottom: 0.4rem;
 }
 
+.subtitulo-seccion {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
 /* Contacto */
 .contact-container {
   display: grid;
