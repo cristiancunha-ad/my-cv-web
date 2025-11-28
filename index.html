@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cristian García — CV Profesional</title>
-  <link rel="stylesheet" href="./styles/main.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/main.css?v=5.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
@@ -19,15 +19,19 @@
         <a href="#proyectos" data-key="nav-proyectos">Proyectos</a>
         <a href="#experiencia" data-key="nav-experiencia">Experiencia</a>
         <a href="#estudios" data-key="nav-estudios">Estudios</a>
+        <a href="#certificaciones" data-key="nav-certificaciones">Certificaciones</a>
         <a href="#contacto" data-key="nav-contacto">Contacto</a>
       </nav>
-      <!-- Botón de idiomas -->
-      <select id="lang-switcher">
-        <option value="es">🇪🇸 ES</option>
-        <option value="ca">🇦🇩 CA</option>
-        <option value="en">🇬🇧 EN</option>
-        <option value="fr">🇫🇷 FR</option>
-      </select>
+      <!-- Botón de idiomas y descarga -->
+      <div class="header-actions">
+        <select id="lang-switcher">
+          <option value="es">🇪🇸 ES</option>
+          <option value="ca">🇦🇩 CA</option>
+          <option value="en">🇬🇧 EN</option>
+          <option value="fr">🇫🇷 FR</option>
+        </select>
+        <a href="#" id="download-cv" class="download-cv-btn" data-key="descargar-cv" title="Descargar CV en PDF">📥</a>
+      </div>
     </div>
   </header>
 
@@ -59,6 +63,63 @@
     </div>
   </section>
 
+  <!-- Idiomas -->
+  <section id="idiomas" class="section">
+    <h2 data-key="idiomas-titulo">Idiomas</h2>
+    <div class="idiomas-grid">
+      <div class="idioma-card">
+        <div class="idioma-flag">🇪🇸</div>
+        <h3>Español</h3>
+        <div class="nivel-idioma">
+          <div class="nivel-bar">
+            <div class="nivel-fill" style="width: 100%"></div>
+          </div>
+          <span data-key="idioma-nativo">Nativo</span>
+        </div>
+      </div>
+      <div class="idioma-card">
+        <div class="idioma-flag">🇦🇩</div>
+        <h3>Catalán</h3>
+        <div class="nivel-idioma">
+          <div class="nivel-bar">
+            <div class="nivel-fill" style="width: 85%"></div>
+          </div>
+          <span data-key="idioma-buen-nivel">Buen nivel</span>
+        </div>
+      </div>
+      <div class="idioma-card">
+        <div class="idioma-flag">🇬🇧</div>
+        <h3>Inglés</h3>
+        <div class="nivel-idioma">
+          <div class="nivel-bar">
+            <div class="nivel-fill" style="width: 50%"></div>
+          </div>
+          <span data-key="idioma-basico">Básico</span>
+        </div>
+      </div>
+      <div class="idioma-card">
+        <div class="idioma-flag">🇫🇷</div>
+        <h3>Francés</h3>
+        <div class="nivel-idioma">
+          <div class="nivel-bar">
+            <div class="nivel-fill" style="width: 75%"></div>
+          </div>
+          <span data-key="idioma-bien">Bien</span>
+        </div>
+      </div>
+      <div class="idioma-card">
+        <div class="idioma-flag">🇵🇹</div>
+        <h3>Portugués</h3>
+        <div class="nivel-idioma">
+          <div class="nivel-bar">
+            <div class="nivel-fill" style="width: 75%"></div>
+          </div>
+          <span data-key="idioma-bien">Bien</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Proyectos -->
   <section id="proyectos" class="section">
     <h2 data-key="proyectos-titulo">Proyectos & Emprendimientos</h2>
@@ -75,27 +136,22 @@
       </div>
       <div class="proyecto-card">
         <h3 data-key="proyecto3-titulo">Chatbot básico</h3>
-        <p data-key="proyecto3-texto">Desarrollé un chatbot que interactúa conmigo para automatizar tareas y consultas simples, demostrando conocimientos en Python y lógica de programación.</p>
+        <p data-key="proyecto3-texto">Chatbot desarrollado en Python que automatiza tareas y consultas simples mediante conversación inteligente.</p>
         <a class="open-modal" data-img="assets/img/flujo-chatbot.webp" data-key="ver-flujo">Ver flujo</a>
       </div>
       <div class="proyecto-card">
         <h3 data-key="proyecto4-titulo">E-commerce 3D y Dropshipping</h3>
-        <p data-key="proyecto4-texto">Creé dos tiendas online: una de dropshipping y otra de productos impresos en 3D con mi Bambulab A1, incluyendo diseño, desarrollo y marketing digital.</p>
+        <p data-key="proyecto4-texto">Dos tiendas online: dropshipping y productos 3D impresos. Incluye diseño, desarrollo y marketing digital.</p>
         <a href="https://aubity.es/" target="_blank" data-key="ver-tienda">Ver Tienda</a>
       </div>
       <div class="proyecto-card">
         <h3 data-key="proyecto5-titulo">Task Flow en Java</h3>
-        <p data-key="proyecto5-texto">
-          Aplicación desarrollada en Java para agilizar y automatizar la gestión de usuarios en Active Directory. 
-          Permite consultar información, ejecutar tareas administrativas y centralizar procesos desde una única interfaz, 
-          reduciendo tiempos y errores operativos.
-        </p>
-        <a href="https://cristiancunha-ad.github.io/task-flow/" target="_blank" data-key="codigo">Ver</a>
+        <p data-key="proyecto5-texto">Aplicación Java para automatizar la gestión de usuarios en Active Directory, centralizando consultas y tareas administrativas desde una única interfaz.</p>
+        <a href="https://cristiancunha-ad.github.io/task-flow/" target="_blank" data-key="codigo">Ver Código</a>
       </div>
       <div class="proyecto-card">
         <h3 data-key="proyecto6-titulo">Mini proyectos rápidos</h3>
-        <p data-key="proyecto6-texto">Pequeños proyectos para portfolio rápido, como calculadoras interactivas en JavaScript, dashboards con APIs públicas y scripts de automatización de tareas.</p>
-        <a href="mini-crm-chatbot/mini-crm/public/index.html" target="_blank" data-key="ver-ejemplos">Ver Ejemplos</a>
+        <p data-key="proyecto6-texto">Mini proyectos: calculadoras interactivas en JavaScript, dashboards con APIs públicas y scripts de automatización.</p>
         <a href="#" target="_blank" data-key="codigo">Código</a>
       </div>
     </div>
@@ -152,6 +208,23 @@
     </div>
   </section>
 
+  <!-- Certificaciones -->
+  <section id="certificaciones" class="section">
+    <h2 data-key="certificaciones-titulo">Certificaciones</h2>
+    <div class="certificaciones-grid">
+      <div class="certificacion-card">
+        <div class="cert-icon">🎓</div>
+        <h3 data-key="cert1-titulo">PHP, HTML & CSS</h3>
+        <p data-key="cert1-texto">Mastermind.ac</p>
+      </div>
+      <div class="certificacion-card">
+        <div class="cert-icon">🐧</div>
+        <h3 data-key="cert2-titulo">Linux</h3>
+        <p data-key="cert2-texto">Mastermind.ac — 9 horas</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Contacto -->
   <section id="contacto" class="section">
     <h2 data-key="contacto-titulo">Contacto</h2>
@@ -195,6 +268,7 @@
     </div>
   </div>
 
-  <script src="./js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="./js/main.js?v=5.0"></script>
 </body>
 </html>
