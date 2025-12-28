@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Profesional de Cristian García - Desarrollador Web & Especialista en Automatización">
+    <title>Cristian García | Desarrollador Web & Automatización</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">CG<span class="accent">.</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#experience" class="nav-link">Experiencia</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contacto</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <i class="fas fa-rocket"></i>
+                <span>Disponible para nuevos proyectos</span>
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                <span class="greeting">Hola, soy</span>
+                <span class="name">Cristian García</span>
+            </h1>
+            <div class="hero-subtitle animate-fade-in-up">
+                <span class="typing-text" id="typing"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description animate-fade-in-up">
+                Transformo ideas en soluciones digitales eficientes.
+                Especializado en desarrollo web y automatización de procesos
+                que ahorran tiempo y potencian negocios.
+            </p>
+            <div class="hero-cta animate-fade-in-up">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Hablemos
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                    <i class="fas fa-code"></i>
+                    Ver proyectos
+                </a>
+                <button onclick="window.print()" class="btn btn-secondary">
+                    <i class="fas fa-download"></i>
+                    Descargar CV
+                </button>
+            </div>
+            <div class="hero-stats animate-fade-in-up">
+                <div class="stat">
+                    <span class="stat-number" id="experience-years">1.5</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Años de experiencia</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="600">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Tickets resueltos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Proyectos personales</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-user"></i> Conóceme</span>
+                <h2 class="section-title">Sobre Mí</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="foto-perfil.jpg" alt="Cristian García - Desarrollador Web" class="profile-photo">
+                        <div class="image-decoration"></div>
+                    </div>
+                    <div class="about-badges">
+                        <div class="badge-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Remoto</span>
+                        </div>
+                        <div class="badge-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Andorra</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Desarrollador con mentalidad de <span class="highlight">solucionador</span></h3>
+                    <p>
+                        Soy un desarrollador web y especialista en automatización con pasión por crear
+                        soluciones que <strong>ahorran tiempo y optimizan procesos</strong>. Mi enfoque
+                        va más allá del código: busco entender el problema real para ofrecer la mejor solución.
+                    </p>
+                    <p>
+                        Con experiencia en entornos corporativos como <strong>Andorra Telecom</strong> y
+                        actualmente en <strong>MartiMotos</strong>, he desarrollado habilidades tanto técnicas
+                        como de comunicación, gestionando desde tickets de soporte hasta sistemas e-commerce completos.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Automatización</h4>
+                                <p>Flujos inteligentes con Make, Zapier y n8n</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Desarrollo Full Stack</h4>
+                                <p>Desde frontend hasta backend y APIs</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>Sistemas & IT</h4>
+                                <p>Active Directory, SCCM, infraestructura</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="languages">
+                        <h4><i class="fas fa-language"></i> Idiomas</h4>
+                        <div class="language-tags">
+                            <span class="lang-tag native">Español <small>Nativo</small></span>
+                            <span class="lang-tag">Catalán</span>
+                            <span class="lang-tag">Francés</span>
+                            <span class="lang-tag">Portugués</span>
+                            <span class="lang-tag basic">Inglés <small>Básico</small></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Trayectoria</span>
+                <h2 class="section-title">Experiencia Profesional</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item current">
+                    <div class="timeline-marker">
+                        <div class="marker-dot pulse"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-badge">Actual</div>
+                            <span class="timeline-date">Nov 2025 — Presente (<span id="martimotos-duration">2 meses</span>)</span>
+                        </div>
+                        <h3 class="timeline-title">Desarrollador & Help Desk</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> MartiMotos
+                        </h4>
+                        <p class="timeline-description">
+                            Desarrollo full-stack y mantenimiento de sistemas e-commerce y gestión empresarial.
+                            Creación y configuración de equipos, soporte técnico interno.
+                        </p>
+                        <div class="timeline-achievements">
+                            <div class="achievement">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Desarrollo de <strong>App de Fidelización</strong> con sistema de puntos</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-warehouse"></i>
+                                <span>Integración con <strong>Mecalux</strong> (gestión de almacén)</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-boxes"></i>
+                                <span>Desarrollo front/back del <strong>sistema de stock</strong></span>
+                            </div>
+                        </div>
+                        <div class="timeline-tags">
+                            <span>PrestaShop</span>
+                            <span>Sage</span>
+                            <span>Mecalux</span>
+                            <span>CSHTML/Razor</span>
+                            <span>TPV</span>
+                            <span>Frontend</span>
+                            <span>Backend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 — 2025</span>
+                        <h3 class="timeline-title">Help Desk & Administración de Sistemas</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> Andorra Telecom
+                        </h4>
+                        <p class="timeline-description">
+                            Gestión de soporte técnico nivel 1 y 2 para la principal empresa de telecomunicaciones
+                            del país. Administración de infraestructura IT corporativa.
+                        </p>
+                        <div class="timeline-achievements">
+                            <div class="achievement">
+                                <i class="fas fa-ticket-alt"></i>
+                                <span><strong>600+</strong> tickets gestionados</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-laptop"></i>
+                                <span><strong>50+</strong> equipos configurados</span>
+                            </div>
+                        </div>
+                        <div class="timeline-tags">
+                            <span>Active Directory</span>
+                            <span>SCCM</span>
+                            <span>PowerShell</span>
+                            <span>Hardware</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024</span>
+                        <h3 class="timeline-title">Desarrollador de Automatizaciones</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> R&C Associats
+                        </h4>
+                        <p class="timeline-description">
+                            Desarrollo de macros y automatizaciones en Visual Basic para Excel,
+                            optimizando procesos bancarios para MoraBanc.
+                        </p>
+                        <div class="timeline-impact">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Ahorro significativo de horas diarias en gestión de datos</span>
+                        </div>
+                        <div class="timeline-tags">
+                            <span>Visual Basic</span>
+                            <span>Excel</span>
+                            <span>Macros</span>
+                            <span>Automatización</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-tools"></i> Tecnologías</span>
+                <h2 class="section-title">Stack Técnico</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desarrollo Web</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-info">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-info">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-info">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="75">
+                            <div class="skill-info">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3>Programación</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-info">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="45">
+                            <div class="skill-info">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="70">
+                            <div class="skill-info">
+                                <i class="fas fa-terminal"></i>
+                                <span>PowerShell</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="65">
+                            <div class="skill-info">
+                                <i class="fas fa-file-code"></i>
+                                <span>Visual Basic</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automatización</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-info">
+                                <i class="fas fa-robot"></i>
+                                <span>Make (Integromat)</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-info">
+                                <i class="fas fa-bolt"></i>
+                                <span>Zapier</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <div class="skill-info">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>n8n</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Sistemas & DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-level="80">
+                            <div class="skill-info">
+                                <i class="fab fa-microsoft"></i>
+                                <span>Active Directory</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="75">
+                            <div class="skill-info">
+                                <i class="fas fa-boxes"></i>
+                                <span>SCCM</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="55">
+                            <div class="skill-info">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git & GitHub</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                        <div class="skill-item" data-level="60">
+                            <div class="skill-info">
+                                <i class="fab fa-linux"></i>
+                                <span>Linux</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-progress"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fas fa-rocket"></i> Portfolio</span>
+                <h2 class="section-title">Proyectos Destacados</h2>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-badge">E-Commerce</div>
+                        <h3>Rioku.es & BeautyLooks</h3>
+                        <p>
+                            Dos tiendas online propias: <strong>Rioku.es</strong> enfocada en productos tech
+                            y <strong>BeautyLooks</strong> especializada en cuidado del cabello y belleza.
+                            Diseño, desarrollo y marketing digital completo.
+                        </p>
+                        <div class="project-tech">
+                            <span>E-commerce</span>
+                            <span>Marketing Digital</span>
+                            <span>Dropshipping</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="task-flow.png" alt="Task Flow - CRUD Java" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://cristiancunha-ad.github.io/task-flow/" target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-badge">Java</div>
+                        <h3>Task Flow</h3>
+                        <p>
+                            CRUD desarrollado en Java como proyecto de práctica.
+                            Gestión básica de usuarios con interfaz gráfica.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>CRUD</span>
+                            <span>GUI</span>
+                        </div>
+                        <a href="https://cristiancunha-ad.github.io/task-flow/" target="_blank" class="project-cta">
+                            Ver proyecto <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-badge">Integración</div>
+                        <h3>Automatización de Reservas</h3>
+                        <p>
+                            Flujo automatizado WhatsApp + Calendly para restaurantes.
+                            Reduce errores y optimiza la gestión de citas.
+                        </p>
+                        <div class="project-tech">
+                            <span>Make</span>
+                            <span>WhatsApp API</span>
+                            <span>Calendly</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-badge">IA & Automatización</div>
+                        <h3>Chatbot Inteligente n8n</h3>
+                        <p>
+                            Chatbot completo desarrollado en n8n con capacidad de recibir
+                            imágenes y audios. Responde razonando con IA de forma contextual.
+                        </p>
+                        <div class="project-tech">
+                            <span>n8n</span>
+                            <span>IA</span>
+                            <span>WhatsApp</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/cristiancunha-ad" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-badge">Herramientas</div>
+                        <h3>Arsenal de Llamadas</h3>
+                        <p>
+                            Herramienta para emprendedores con guiones de llamadas,
+                            objeciones y respuestas con buscador rápido. Incluye este CV y más proyectos.
+                        </p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Ventas</span>
+                            <span>Productividad</span>
+                        </div>
+                        <a href="https://github.com/cristiancunha-ad" target="_blank" class="project-cta">
+                            Ver en GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educación y Certificaciones -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="education-grid">
+                <div class="education-block">
+                    <div class="section-header left">
+                        <span class="section-tag"><i class="fas fa-graduation-cap"></i> Formación</span>
+                        <h2 class="section-title">Educación</h2>
+                    </div>
+                    <div class="education-list">
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="education-content">
+                                <h4>Ingeniería Informática</h4>
+                                <p class="institution">Universitat d'Andorra (UdA)</p>
+                                <span class="status in-progress">1.5 años completados</span>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="education-content">
+                                <h4>BP en Sistemes i Xarxes Informàtiques</h4>
+                                <p class="institution">Centre de Formació Professional d'Aixovall</p>
+                                <span class="status completed">Completado</span>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <i class="fas fa-network-wired"></i>
+                            </div>
+                            <div class="education-content">
+                                <h4>DEP en Microinformàtica i Xarxes</h4>
+                                <p class="institution">Centre de Formació Professional d'Aixovall</p>
+                                <span class="status completed">Completado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications-block">
+                    <div class="section-header left">
+                        <span class="section-tag"><i class="fas fa-certificate"></i> Credenciales</span>
+                        <h2 class="section-title">Certificaciones</h2>
+                    </div>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4>PHP, HTML & CSS</h4>
+                                <p>Mastermind.ac</p>
+                            </div>
+                            <i class="fas fa-check-circle cert-badge"></i>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-icon">
+                                <i class="fab fa-linux"></i>
+                            </div>
+                            <div class="cert-content">
+                                <h4>Linux</h4>
+                                <p>Mastermind.ac — 9 horas</p>
+                            </div>
+                            <i class="fas fa-check-circle cert-badge"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="section-header left">
+                        <span class="section-tag"><i class="fas fa-envelope"></i> Contacto</span>
+                        <h2 class="section-title">¿Hablamos?</h2>
+                    </div>
+                    <p class="contact-description">
+                        Estoy abierto a nuevas oportunidades y proyectos interesantes.
+                        Si tienes una idea o necesitas ayuda con tu proyecto, ¡no dudes en contactarme!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:cristiancunha.ad@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">cristiancunha.ad@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/376395902?text=Hola%20Cristian%2C%20he%20visto%20tu%20CV%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20una%20oportunidad." target="_blank" class="contact-method">
+                            <div class="method-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">WhatsApp</span>
+                                <span class="method-value">+376 39 59 02</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/cristian-garcia-bb0791329/" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">LinkedIn</span>
+                                <span class="method-value">Cristian García</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/cristiancunha-ad" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">GitHub</span>
+                                <span class="method-value">cristiancunha-ad</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <div class="cta-card">
+                        <div class="cta-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>¿Listo para empezar?</h3>
+                        <p>Cuéntame sobre tu proyecto y encontremos la mejor solución juntos.</p>
+                        <a href="mailto:cristiancunha.ad@gmail.com?subject=Hola Cristian - Nuevo Proyecto" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar mensaje
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">CG<span class="accent">.</span></span>
+                    <p>Desarrollador Web & Especialista en Automatización</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/cristiancunha-ad" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/cristian-garcia-bb0791329/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:cristiancunha.ad@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Cristian García. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
