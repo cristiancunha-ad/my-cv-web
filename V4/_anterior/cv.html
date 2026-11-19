@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV · Cristian García</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* CV de una página (A4). Fuente para generar CV-Cristian-Garcia.pdf */
+:root {
+    --side: #0f1b33;
+    --side-text: #c7d2e5;
+    --side-muted: #8796b3;
+    --accent: #2563eb;
+    --accent-2: #06b6d4;
+    --accent-light: #7fb0ff;
+    --ink: #0f172a;
+    --text: #334155;
+    --muted: #64748b;
+    --line: #e2e8f0;
+}
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #e5e7eb; }
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    color: var(--text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+strong { color: var(--ink); font-weight: 600; }
+
+.page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 66mm 1fr;
+    background: #fff;
+    overflow: hidden;
+}
+@media screen { .page { margin: 24px auto; box-shadow: 0 10px 40px rgb(0 0 0 / .18); } }
+
+/* ---------- Columna lateral ---------- */
+.side {
+    background: var(--side);
+    color: var(--side-text);
+    padding: 11mm 7mm 9mm 8mm;
+    font-size: 8.3pt;
+    line-height: 1.45;
+    position: relative;
+}
+.side::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 3.2mm;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+.photo {
+    display: block;
+    width: 34mm;
+    height: 34mm;
+    margin: 0 auto 6mm;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 1.2mm solid rgb(255 255 255 / .08);
+    box-shadow: 0 0 0 0.35mm rgb(127 176 255 / .55);
+}
+.side h2 {
+    margin: 5.2mm 0 2.2mm;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+}
+.side h2::after { content: ""; flex: 1; height: 0.3mm; background: rgb(255 255 255 / .14); }
+
+.contact li { display: flex; align-items: center; gap: 2.2mm; margin-bottom: 1.6mm; word-break: break-word; }
+.contact svg {
+    width: 3.4mm; height: 3.4mm; flex-shrink: 0;
+    fill: none; stroke: var(--accent-light); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+
+.skill-block { margin-bottom: 2.4mm; }
+.skill-block h3 { font-size: 7.9pt; font-weight: 600; color: #fff; margin-bottom: 1mm; }
+.chips { display: flex; flex-wrap: wrap; gap: 1mm; }
+.chips li {
+    padding: 0.35mm 1.8mm;
+    border-radius: 99px;
+    background: rgb(127 176 255 / .12);
+    color: #dbe6f7;
+    font-size: 7.3pt;
+}
+
+.lang li { display: flex; justify-content: space-between; gap: 2mm; margin-bottom: 1mm; }
+.lang span:last-child { color: var(--side-muted); }
+
+.edu li { margin-bottom: 2.3mm; }
+.edu strong { display: block; color: #fff; font-size: 8pt; line-height: 1.3; }
+.edu span { display: block; color: var(--side-muted); font-size: 7.5pt; }
+.edu em { font-style: normal; color: var(--accent-light); font-size: 7.4pt; }
+
+/* ---------- Columna principal ---------- */
+.main { padding: 11mm 10mm 9mm 9mm; font-size: 8.9pt; line-height: 1.5; }
+
+.name {
+    font-size: 27pt;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--ink);
+}
+.name span { color: var(--accent); }
+.role {
+    margin-top: 2.2mm;
+    font-size: 10.6pt;
+    font-weight: 600;
+    color: var(--accent);
+}
+.role i { font-style: normal; color: #94a3b8; margin: 0 1.6mm; }
+
+.main h2 {
+    margin: 6.2mm 0 2.8mm;
+    font-size: 8.6pt;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    gap: 2.5mm;
+}
+.main h2::before { content: ""; width: 4mm; height: 1mm; border-radius: 1mm; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.main h2::after { content: ""; flex: 1; height: 0.3mm; background: var(--line); }
+
+.profile { color: var(--text); }
+
+.job { margin-bottom: 3.6mm; }
+.job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
+.job-title { font-size: 9.6pt; font-weight: 700; color: var(--ink); }
+.job-date { font-size: 7.8pt; font-weight: 500; color: var(--muted); white-space: nowrap; }
+.job-company { font-size: 8.3pt; font-weight: 500; color: var(--accent); margin: 0.3mm 0 1.4mm; }
+.job ul li { position: relative; padding-left: 3.4mm; margin-bottom: 1mm; }
+.job ul li::before {
+    content: "";
+    position: absolute;
+    left: 0.4mm;
+    top: 0.62em;
+    width: 1.3mm;
+    height: 1.3mm;
+    border-radius: 50%;
+    background: var(--accent);
+}
+
+.projects { display: grid; grid-template-columns: 1fr 1fr; gap: 2.6mm 4mm; }
+.project {
+    padding: 2.4mm 2.8mm;
+    border: 0.3mm solid var(--line);
+    border-left: 0.9mm solid var(--accent);
+    border-radius: 1.6mm;
+    font-size: 7.9pt;
+    line-height: 1.4;
+}
+.project h3 { font-size: 8.6pt; font-weight: 700; color: var(--ink); margin-bottom: 0.6mm; }
+.project h3 small { font-weight: 500; color: var(--muted); font-size: 7.3pt; }
+.project .stack { margin-top: 0.8mm; font-size: 7.2pt; color: var(--accent); font-weight: 500; }
+.more { margin-top: 2.6mm; font-size: 8pt; color: var(--muted); }
+.more strong { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+
+    <!-- Columna lateral -->
+    <aside class="side">
+        <img class="photo" src="foto-perfil-web.jpg" alt="Cristian García">
+
+        <h2>Contacto</h2>
+        <ul class="contact">
+            <li><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>+376 39 59 02</li>
+            <li><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>cristiancunha.ad@gmail.com</li>
+            <li><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><a href="https://www.linkedin.com/in/cristian-garcia-bb0791329/">linkedin.com/in/cristian-garcia-bb0791329</a></li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg><a href="https://cristiancunha-ad.github.io/my-cv-web/">Portfolio: cristiancunha-ad.github.io/my-cv-web</a></li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>Andorra</li>
+        </ul>
+
+        <h2>Competencias</h2>
+        <div class="skill-block">
+            <h3>Desarrollo web</h3>
+            <ul class="chips"><li>PHP</li><li>PrestaShop</li><li>JavaScript</li><li>TypeScript</li><li>Next.js</li><li>React</li><li>C# / Razor</li></ul>
+        </div>
+        <div class="skill-block">
+            <h3>Datos y backend</h3>
+            <ul class="chips"><li>MySQL</li><li>PostgreSQL</li><li>Supabase</li><li>SQLite</li><li>Node.js</li><li>Python</li><li>APIs REST</li></ul>
+        </div>
+        <div class="skill-block">
+            <h3>IA y automatización</h3>
+            <ul class="chips"><li>n8n</li><li>API de OpenAI</li><li>API de Claude</li><li>RAG</li><li>Multiagente</li><li>Claude Code</li></ul>
+        </div>
+        <div class="skill-block">
+            <h3>Sistemas</h3>
+            <ul class="chips"><li>Active Directory</li><li>SCCM</li><li>PowerShell</li><li>Windows</li><li>Linux</li><li>Git</li></ul>
+        </div>
+
+        <h2>Idiomas</h2>
+        <ul class="lang">
+            <li><span>Español</span><span>Nativo</span></li>
+            <li><span>Catalán</span><span>Buen nivel</span></li>
+            <li><span>Francés</span><span>Buen nivel</span></li>
+            <li><span>Portugués</span><span>Buen nivel</span></li>
+            <li><span>Inglés</span><span>Básico</span></li>
+        </ul>
+
+        <h2>Formación</h2>
+        <ul class="edu">
+            <li><strong>Grado en Ingeniería Informática</strong><span>Universitat Oberta de Catalunya</span><em>En curso · desde 2026</em></li>
+            <li><strong>Ingeniería Informática</strong><span>Universitat d'Andorra</span><em>1,5 cursos completados</em></li>
+            <li><strong>BP Sistemes i Xarxes Informàtiques</strong><span>CFP d'Aixovall</span></li>
+            <li><strong>DEP Microinformàtica i Xarxes</strong><span>CFP d'Aixovall</span></li>
+        </ul>
+    </aside>
+
+    <!-- Columna principal -->
+    <main class="main">
+        <h1 class="name">Cristian <span>García</span></h1>
+        <p class="role">Desarrollo web<i>·</i>Automatización e IA<i>·</i>Sistemas IT</p>
+
+        <h2>Perfil</h2>
+        <p class="profile">
+            Desarrollador con base en sistemas. Mantengo en producción un e-commerce PrestaShop en 26 países:
+            desarrollo módulos, integro APIs, automatizo procesos y llevo la parte de sistemas. Uso la IA como herramienta
+            para entregar más rápido, con pruebas y responsabilidad sobre lo que sube a producción. Fuera del trabajo
+            construyo mis propias aplicaciones con IA.
+        </p>
+
+        <h2>Experiencia</h2>
+        <div class="job">
+            <div class="job-head">
+                <span class="job-title">Desarrollador y Técnico de Sistemas IT</span>
+                <span class="job-date">Nov 2025 – actualidad</span>
+            </div>
+            <p class="job-company">MartiMotos · e-commerce de equipamiento de moto</p>
+            <ul>
+                <li><strong>Chatbot de IA en producción</strong>: rehíce gran parte de un módulo comprado. Búsqueda híbrida sobre ~14.000 productos, consulta de pedidos verificada, seguridad y RGPD, y consola de atención en directo con traducción automática. <strong>+540 tests automáticos</strong>.</li>
+                <li><strong>14 idiomas lanzados</strong> en la tienda (PrestaShop, Doofinder, Google Merchant y Meta): de 3 semanas a <strong>48 horas por idioma</strong>.</li>
+                <li><strong>Cambio de precios automatizado en 22 países</strong>: 66 workflows en n8n con las APIs de Google Merchant y Meta.</li>
+                <li><strong>+200.000 correcciones</strong> en 24 feeds de Google Shopping y ~100 reglas de categoría.</li>
+                <li>Módulos PrestaShop (guía de tallas), herramienta interna en C# / Razor, TPV, Mecalux y ~530 tickets de soporte.</li>
+            </ul>
+        </div>
+        <div class="job">
+            <div class="job-head">
+                <span class="job-title">Help Desk y Administración de Sistemas</span>
+                <span class="job-date">2024 – 2025</span>
+            </div>
+            <p class="job-company">Andorra Telecom</p>
+            <ul>
+                <li>Soporte N1 y N2: <strong>+600 incidencias</strong> resueltas y <strong>+50 equipos</strong> configurados.</li>
+                <li>Active Directory, despliegue de aplicaciones con SCCM y scripts en PowerShell.</li>
+            </ul>
+        </div>
+        <div class="job">
+            <div class="job-head">
+                <span class="job-title">Desarrollador de Automatizaciones</span>
+                <span class="job-date">2024</span>
+            </div>
+            <p class="job-company">R&amp;C Associats · proyecto para MoraBanc</p>
+            <ul>
+                <li>Macros en Visual Basic para Excel que ahorraron horas diarias de gestión de datos.</li>
+            </ul>
+        </div>
+
+        <h2>Proyectos propios</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Order Flow <small>· demo</small></h3>
+                Pedidos por WhatsApp, email, audio o PDF convertidos con IA en pedidos listos para el ERP.
+                <p class="stack">Next.js · TypeScript · OpenAI API</p>
+            </div>
+            <div class="project">
+                <h3>Orbit</h3>
+                Herramienta de gestión interna: clientes, proyectos, finanzas, documentos y PDFs, con seguridad por filas.
+                <p class="stack">Next.js · Supabase · PostgreSQL</p>
+            </div>
+            <div class="project">
+                <h3>Canal de contenido automatizado</h3>
+                La IA escribe, revisa, pone voz, monta el vídeo y publica en Instagram, con aprobación por Telegram.
+                <p class="stack">Python · Claude API · ffmpeg</p>
+            </div>
+            <div class="project">
+                <h3>Asesor y sistema multiagente</h3>
+                Asistentes de IA con límites de gasto, búsqueda con fuentes y evaluación automática de calidad.
+                <p class="stack">TypeScript · Claude API · OpenAI API</p>
+            </div>
+        </div>
+        <p class="more">Detalle de cada proyecto en el portfolio: <strong>cristiancunha-ad.github.io/my-cv-web</strong></p>
+    </main>
+</div>
+</body>
+</html>
