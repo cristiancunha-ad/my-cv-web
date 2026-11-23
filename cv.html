@@ -26,12 +26,12 @@ body {
 ul { list-style: none; }
 b { color: var(--ink); }
 
-.page { width: 210mm; height: 297mm; display: flex; flex-direction: column; }
+.page { width: 210mm; height: 297mm; overflow: hidden; display: flex; flex-direction: column; }
 
 /* Banda superior */
 .band {
     background: var(--band);
-    padding: 8mm 12mm 7mm;
+    padding: 6.5mm 12mm 5.5mm;
     display: flex;
     align-items: center;
     gap: 9mm;
@@ -55,7 +55,7 @@ h1 b { font-weight: 700; }
     flex: 1;
     display: grid;
     grid-template-columns: 64mm 1fr;
-    padding: 7mm 12mm 6mm;
+    padding: 5.5mm 12mm 3mm;
 }
 .left { padding-right: 6mm; border-right: 0.5pt solid var(--line); }
 .right { padding-left: 6mm; }
@@ -68,7 +68,7 @@ h2 {
     color: var(--ink);
     margin-bottom: 2.4mm;
 }
-.block + .block { margin-top: 3.4mm; padding-top: 3.4mm; border-top: 0.5pt solid var(--line); }
+.block + .block { margin-top: 2.6mm; padding-top: 2.6mm; border-top: 0.5pt solid var(--line); }
 
 /* Columna izquierda */
 .skill-group { margin-bottom: 2mm; }
@@ -85,7 +85,7 @@ h2 {
 /* Columna derecha */
 .profile { text-align: justify; }
 
-.job { margin-top: 3mm; }
+.job { margin-top: 2.4mm; }
 .job:first-of-type { margin-top: 0; }
 .job-title { font-size: 11.5pt; font-weight: 700; color: var(--ink); }
 .job-where { color: var(--ink); }
@@ -130,7 +130,7 @@ h2 {
                 </div>
                 <div class="skill-group">
                     <b>Automatización e IA:</b>
-                    <ul><li>n8n, APIs REST</li><li>APIs de OpenAI y Claude</li><li>Python</li></ul>
+                    <ul><li>VBA (Excel y Outlook)</li><li>Python (Excel, PDFs y correos)</li><li>n8n, APIs REST</li><li>APIs de OpenAI y Claude</li></ul>
                 </div>
                 <div class="skill-group">
                     <b>Sistemas:</b>
@@ -162,7 +162,7 @@ h2 {
             <div class="block">
                 <h2>Perfil</h2>
                 <p class="profile">
-                    Desarrollador con base en sistemas. Mantengo en producción una tienda online PrestaShop que vende en
+                    Desarrollador con base en sistemas y experiencia automatizando procesos en banca y e-commerce. Mantengo en producción una tienda online PrestaShop que vende en
                     26 países: desarrollo módulos, integro APIs y automatizo procesos, sin dejar la parte de sistemas.
                     Uso la IA como herramienta de trabajo y en mis proyectos personales.
                 </p>
@@ -179,7 +179,8 @@ h2 {
                         <li>Apertura de 14 idiomas sin proveedor externo: de 3 semanas a 48 horas por idioma.</li>
                         <li>Cambio de precios automatizado en 22 países con n8n y las APIs de Google Merchant y Meta.</li>
                         <li>Más de 200.000 datos corregidos en 24 feeds de Google Shopping.</li>
-                        <li>Guía de tallas, herramienta interna en C# / Razor, TPV, Mecalux y unos 530 tickets de soporte.</li>
+                        <li>Herramienta interna de guía de tallas en C# / Razor.</li>
+                        <li>Soporte de sistemas: TPV, Mecalux y unos 530 tickets resueltos.</li>
                     </ul>
                 </div>
                 <div class="job">
@@ -188,7 +189,8 @@ h2 {
                     <p class="job-date">2024 - 2025</p>
                     <ul>
                         <li>Soporte de nivel 1 y 2: más de 600 incidencias resueltas y más de 50 equipos configurados.</li>
-                        <li>Active Directory, despliegue de aplicaciones con SCCM y scripts en PowerShell.</li>
+                        <li>Administración de Active Directory y despliegue de aplicaciones con SCCM.</li>
+                        <li>Scripts en PowerShell para automatizar altas de usuarios y despliegues.</li>
                     </ul>
                 </div>
                 <div class="job">
@@ -196,7 +198,10 @@ h2 {
                     <p class="job-where">R&amp;C Associats, para MoraBanc</p>
                     <p class="job-date">2024</p>
                     <ul>
-                        <li>Macros en Visual Basic para Excel que ahorraron horas diarias de gestión de datos.</li>
+                        <li>Automatización de procesos diarios de varios departamentos con VBA y Python.</li>
+                        <li>Lectura de adjuntos de Outlook, consolidación de Excel e informes.</li>
+                        <li>Extracción y tratamiento de datos de PDFs y correos, sin copia manual.</li>
+                        <li>Validación y limpieza de datos antes de su carga, con control de errores.</li>
                     </ul>
                 </div>
             </div>
@@ -208,7 +213,7 @@ h2 {
                     <li><b>Orbit</b>: gestión interna con Row Level Security en todas las tablas. <span class="stack">Next.js, Supabase.</span></li>
                     <li><b>Canal automatizado</b>: la IA escribe, se generan voz y vídeo, y se aprueba por Telegram. <span class="stack">Python.</span></li>
                 </ul>
-                <p class="web">Más proyectos: cristiancunha-ad.github.io/my-cv-web · linkedin.com/in/cristian-garcia-bb0791329</p>
+                <p class="web">Más proyectos: cristiancunha-ad.github.io/my-cv-web · linkedin.com/in/cristian-garcia-cunha-bb0791329</p>
             </div>
         </main>
     </div>
